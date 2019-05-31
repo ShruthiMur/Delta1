@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ContainLand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/AODC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+            android:text="Age of Death Calculator"
+            android:textColor="#000000"
+            android:textSize="45dp" />
+
+        <EditText
+            android:id="@+id/Deathage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignLeft="@id/AODC"
+            android:layout_below="@id/AODC"
+            android:hint="Enter the Age"
+            android:inputType="number"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/EYGH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignRight="@id/AODC"
+            android:layout_below="@id/AODC"
+            android:text="Enter your guesses here:"
+            android:textSize="30sp"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+
+            android:id="@+id/Guesses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Guess the Age"
+            android:layout_alignLeft="@id/EYGH"
+            android:layout_below="@id/EYGH"
+            android:layout_marginTop="16dp"
+            android:inputType="number"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:layout_below="@id/Deathage">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:onClick="Set"
+                android:text="Set"
+                android:textSize="24dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:onClick="Guess"
+                android:text="Guess"
+                android:textSize="24dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Retry"
+                android:textSize="24dp"
+                android:text="RETRY"
+                android:layout_marginLeft="16dp"
+                android:onClick="Retry"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:layout_alignLeft="@id/AODC"
+            android:layout_below="@id/Guesses" />
+
+    </RelativeLayout>
+</ScrollView>
